@@ -1,0 +1,10 @@
+t = {')': '(',']': '[','}': '{'}
+
+for i in range(int(input())):
+    s = []
+    for x in input():
+        if s and t.get(x) == s[-1]:
+            s.pop()
+        else:
+            s.append(x)
+    print("NO" if s else "YES")

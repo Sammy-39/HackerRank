@@ -1,0 +1,30 @@
+n = int(input())
+for i in range(2*n):
+    for j in range(2*n):
+        if i<n and j==n-i-1:
+            print('/',end='')
+        elif i<n and j==n+i:
+            print('\\',end='')
+        elif i>=n and j==i-n:
+            print('\\',end='')
+        elif i>=n and j==3*n-i-1:
+            print('/',end='')
+        else:
+            print('*',end='')
+    print()
+    
+    
+Input:
+5
+
+Output:
+****/\****
+***/**\***
+**/****\**
+*/******\*
+/********\
+\********/
+*\******/*
+**\****/**
+***\**/***
+****\/****

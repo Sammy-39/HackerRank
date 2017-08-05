@@ -1,0 +1,13 @@
+n = int(input())
+a = [int(x) for x in input().split()]
+a.sort()
+d,c=0,0
+for i in range(n-1):
+    if a[i]+1 == a[i+1]:
+        d +=1
+    else:
+        d = 0
+    if d == 1:
+       c += 1
+
+print(c)

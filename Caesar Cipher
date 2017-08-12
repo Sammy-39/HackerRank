@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int n,i,r;
+    char a;
+    string s;
+    cin>>n>>s>>r;
+    for(int i=0;i<n;i++){
+        if(isalpha(s[i])){
+            a = isupper(s[i])?'A':'a';
+            s[i]= a + (s[i] - a + r)%26;
+        }
+    }       
+    cout<<s;
+}
